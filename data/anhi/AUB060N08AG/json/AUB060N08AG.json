@@ -1,0 +1,79 @@
+{
+  "components": [
+    {
+      "componentName": "AUA060N08AG",
+      "manufacturer": "ANHI Semiconductor",
+      "specifications": {
+        "V_DS_MAX": { "value": 80, "unit": "V", "type": "Max" },
+        "R_DS(ON)": {
+          "value": { "typ": 5.6, "max": 6 },
+          "unit": "mΩ",
+          "type": "Typ/Max"
+        },
+        "Q_g": { "value": 55.7, "unit": "nC", "type": "Typ" },
+        "I_D_MAX": { "value": 240, "unit": "A", "type": "Max" }
+      },
+      "packaging": [
+        { "package": "TO220F", "marking": "AUA060N08AG" },
+        { "package": "TO263", "marking": "AUB060N08AG" },
+        { "package": "TO220", "marking": "AUP060N08AG" },
+        { "package": "DFN5x6", "marking": "AUN060N08AG" },
+        { "package": "TO252", "marking": "AUD060N08AG" }
+      ],
+      "maximumRatings": {
+        "I_D_CONTINUOUS": { "min": null, "typ": null, "max": 60, "unit": "A" },
+        "I_D_PULSED": { "min": null, "typ": null, "max": 240, "unit": "A" },
+        "E_AS": { "min": null, "typ": null, "max": 300, "unit": "mJ" },
+        "V_GS": { "min": -20, "typ": null, "max": 20, "unit": "V" },
+        "P_D": {
+          "TO220F": { "max": 30, "unit": "W" },
+          "TO263": { "max": 150, "unit": "W" },
+          "DFN5x6": { "max": 74, "unit": "W" }
+        },
+        "T_j": { "min": -55, "typ": null, "max": 175, "unit": "°C" }
+      },
+      "thermalCharacteristics": {
+        "TO220F": {
+          "R_θJC": { "min": null, "typ": 5, "max": null, "unit": "°C/W" },
+          "R_θJA": { "min": null, "typ": 60, "max": null, "unit": "°C/W" }
+        },
+        "TO263": {
+          "R_θJC": { "min": null, "typ": 1, "max": null, "unit": "°C/W" },
+          "R_θJA": { "min": null, "typ": 62, "max": null, "unit": "°C/W" }
+        },
+        "DFN5x6": {
+          "R_θJC": { "min": null, "typ": 1.7, "max": null, "unit": "°C/W" },
+          "R_θJA": { "min": null, "typ": 50, "max": null, "unit": "°C/W" }
+        }
+      },
+      "staticCharacteristics": {
+        "V_BD": { "min": 80, "typ": null, "max": null, "unit": "V" },
+        "V_GTH": { "min": 2.5, "typ": 3.4, "max": null, "unit": "V" },
+        "I_GS": { "min": null, "typ": 1000, "max": null, "unit": "nA" },
+        "I_SS": { "min": null, "typ": 100, "max": null, "unit": "nA" },
+        "R_DS(ON)": { "min": 5.4, "typ": 6, "max": null, "unit": "mΩ" },
+        "R_G": { "min": null, "typ": 1.2, "max": null, "unit": "Ω" }
+      },
+      "dynamicCharacteristics": {
+        "C_ISS": { "min": null, "typ": 3730, "max": null, "unit": "pF" },
+        "C_OSS": { "min": null, "typ": 674, "max": null, "unit": "pF" },
+        "C_RSS": { "min": null, "typ": 24.24, "max": null, "unit": "pF" },
+        "t_d(on)": { "min": null, "typ": 16.5, "max": null, "unit": "ns" },
+        "t_r": { "min": null, "typ": 13.7, "max": null, "unit": "ns" },
+        "t_d(off)": { "min": null, "typ": 35.9, "max": null, "unit": "ns" },
+        "t_f": { "min": null, "typ": 13.45, "max": null, "unit": "ns" }
+      },
+      "gateChargeCharacteristics": {
+        "Q_gs": { "min": null, "typ": 15.9, "max": null, "unit": "nC" },
+        "Q_gd": { "min": null, "typ": 13.3, "max": null, "unit": "nC" },
+        "Q_tot": { "min": null, "typ": 55.7, "max": null, "unit": "nC" }
+      },
+      "reverseDiodeCharacteristics": {
+        "V_f": { "min": null, "typ": 0.7, "max": null, "unit": "V" },
+        "t_rr": { "min": null, "typ": 40.9, "max": null, "unit": "ns" },
+        "Q_r": { "min": null, "typ": 106.8, "max": null, "unit": "μC" },
+        "I_rm": { "min": null, "typ": -3.7, "max": null, "unit": "A" }
+      }
+    }
+  ]
+}

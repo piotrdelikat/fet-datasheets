@@ -1,0 +1,57 @@
+{
+  "components": [
+    {
+      "componentName": "AUA060N08AG",
+      "manufacturer": "ANHI Semiconductor",
+      "specifications": {
+        "V_DS_max": { "value": 80, "unit": "V" },
+        "R_DS(ON)_max": { "value": 6, "unit": "mΩ" },
+        "Q_g_typ": { "value": 55.7, "unit": "nC" },
+        "I_D_max": { "value": 240, "unit": "A" }
+      },
+      "packaging": [
+        {
+          "partName": "AUA060N08AG",
+          "package": "TO220F",
+          "marking": "AUA060N08AG"
+        }
+      ],
+      "maxRatings": {
+        "I_D": { "min": null, "typ": null, "max": 60, "unit": "A" },
+        "P_D": { "min": null, "typ": null, "max": 30, "unit": "W" },
+        "T_j": { "min": -55, "typ": null, "max": 175, "unit": "°C" }
+      },
+      "thermalCharacteristics": {
+        "R_θJC": { "min": null, "typ": null, "max": 5, "unit": "°C/W" },
+        "R_θJA": { "min": null, "typ": null, "max": 60, "unit": "°C/W" }
+      },
+      "staticCharacteristics": {
+        "V_GS(th)_min": { "value": 2.5, "unit": "V" },
+        "V_GS(th)_max": { "value": 3.4, "unit": "V" },
+        "I_GS": { "value": 1000, "unit": "nA" },
+        "R_DS(ON)_min": { "value": 5.4, "unit": "mΩ" },
+        "R_DS(ON)_max": { "value": 6, "unit": "mΩ" }
+      },
+      "dynamicCharacteristics": {
+        "C_iss": { "value": 3730, "unit": "pF" },
+        "C_oss": { "value": 674, "unit": "pF" },
+        "C_rss": { "value": 24.24, "unit": "pF" },
+        "t_d(on)": { "value": 16.5, "unit": "ns" },
+        "t_r": { "value": 13.7, "unit": "ns" },
+        "t_d(off)": { "value": 35.9, "unit": "ns" },
+        "t_f": { "value": 13.45, "unit": "ns" }
+      },
+      "gateChargeCharacteristics": {
+        "Q_g": { "value": 55.7, "unit": "nC" },
+        "Q_gs": { "value": 15.9, "unit": "nC" },
+        "Q_gd": { "value": 13.3, "unit": "nC" }
+      },
+      "reverseDiodeCharacteristics": {
+        "V_sd": { "value": 0.7, "unit": "V" },
+        "t_rr": { "value": 40.9, "unit": "ns" },
+        "Q_rr": { "value": 106.8, "unit": "μC" },
+        "I_rm": { "value": -3.7, "unit": "A" }
+      }
+    }
+  ]
+}
