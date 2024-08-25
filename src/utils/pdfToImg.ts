@@ -2,8 +2,8 @@ import { fromPath } from 'pdf2pic';
 import fs from 'fs';
 import path from 'path';
 
-export const convertPdfToImage = async (filePath: string, fileName: string) => {
-  const savePath = path.join(path.dirname(filePath), `${fileName}/images`);
+export const convertPdfToImage = async (mfr: string, mpn: string) => {
+  const savePath = path.join('intermediate', mfr, mpn, 'images');
 
   // Check and create the directory if it doesn't exist
   if (!fs.existsSync(savePath)) {
@@ -11,14 +11,16 @@ export const convertPdfToImage = async (filePath: string, fileName: string) => {
   }
 
   const options = {
-    quality: 75,
-    density: 100,
-    saveFilename: fileName,
+    quality: 90, // Increased quality for better readability
+    density: 300, // Higher density for clearer text
+    saveFilename: mpn,
     savePath: savePath,
-    width: 2480, // A4 width in pixels at 300 DPI
-    height: 3508, // A4 height in pixels at 300 DPI
+    width: 768,
+    height: 1024,
     format: 'png',
   };
+
+  const filePath = `datasheets/${mfr}/${mpn}.pdf`;
   const convert = fromPath(filePath, options);
 
   return convert.bulk(-1, { responseType: 'image' }).then((resolve) => {

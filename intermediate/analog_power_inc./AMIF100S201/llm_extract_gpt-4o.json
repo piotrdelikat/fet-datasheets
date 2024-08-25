@@ -1,0 +1,225 @@
+{
+  "componentName": "AMIF100S201",
+  "manufacturer": "Analog Power",
+  "description": "N-Channel 100-V (D-S) MOSFET",
+  "keyFeatures": [
+    "Low RDS(on) trench technology",
+    "Low thermal impedance",
+    "Fast switching speed"
+  ],
+  "typicalApplications": [
+    "White LED boost converters",
+    "Automotive Systems",
+    "Industrial DC/DC Conversion Circuits"
+  ],
+  "productSummary": {
+    "VDS (V)": 100,
+    "RDS(on) (mΩ)": "4 @ VGS = 10V",
+    "ID (A)": 200
+  },
+  "absoluteMaximumRatings": {
+    "Drain-Source Voltage": { "symbol": "VDS", "limit": 100, "units": "V" },
+    "Gate-Source Voltage": { "symbol": "VGS", "limit": "±20", "units": "V" },
+    "Continuous Drain Current": {
+      "symbol": "ID",
+      "testConditions": "TC=25°C",
+      "limit": 200,
+      "units": "A"
+    },
+    "Pulsed Drain Current": { "symbol": "IDM", "limit": 800, "units": "A" },
+    "Continuous Source Current (Diode Conduction)": {
+      "symbol": "IS",
+      "testConditions": "TC=25°C",
+      "limit": 120,
+      "units": "A"
+    },
+    "Avalanche Energy": {
+      "symbol": "EAS",
+      "testConditions": "L=0.5mH",
+      "limit": 625,
+      "units": "mJ"
+    },
+    "Power Dissipation": {
+      "symbol": "PD",
+      "testConditions": "TC=25°C",
+      "limit": 300,
+      "units": "W"
+    },
+    "Operating Junction and Storage Temperature Range": {
+      "symbol": "TJ, Tstg",
+      "limit": "-55 to 175",
+      "units": "°C"
+    }
+  },
+  "thermalResistanceRatings": {
+    "Maximum Junction-to-Ambient": {
+      "symbol": "RθJA",
+      "maximum": 62.5,
+      "units": "°C/W"
+    },
+    "Maximum Junction-to-Case": {
+      "symbol": "RθJC",
+      "maximum": 0.5,
+      "units": "°C/W"
+    }
+  },
+  "electricalCharacteristics": {
+    "Gate-Source Threshold Voltage": {
+      "symbol": "VGS(th)",
+      "testConditions": "VDS = VGS, ID = 250 μA",
+      "min": 1,
+      "typ": null,
+      "max": null,
+      "unit": "V"
+    },
+    "Gate-Body Leakage": {
+      "symbol": "IGSS",
+      "testConditions": "VDS = 0 V, VGS = ±20 V",
+      "min": null,
+      "typ": null,
+      "max": "±100",
+      "unit": "nA"
+    },
+    "Zero Gate Voltage Drain Current": {
+      "symbol": "IDSS",
+      "testConditions": "VDS = 80 V, VGS = 0 V",
+      "min": null,
+      "typ": 1,
+      "max": 10,
+      "unit": "μA"
+    },
+    "On-State Drain Current": {
+      "symbol": "ID(on)",
+      "testConditions": "VDS = 5 V, VGS = 10 V",
+      "min": 300,
+      "typ": null,
+      "max": null,
+      "unit": "A"
+    },
+    "Drain-Source On-Resistance": {
+      "symbol": "RDS(on)",
+      "testConditions": "VGS = 10 V, ID = 45 A",
+      "min": null,
+      "typ": 4,
+      "max": null,
+      "unit": "mΩ"
+    },
+    "Forward Transconductance": {
+      "symbol": "gfs",
+      "testConditions": "VDS = 15 V, ID = 45 A",
+      "min": null,
+      "typ": 99,
+      "max": null,
+      "unit": "S"
+    },
+    "Diode Forward Voltage": {
+      "symbol": "VSD",
+      "testConditions": "IS = 60 A, VGS = 0 V",
+      "min": null,
+      "typ": 1,
+      "max": null,
+      "unit": "V"
+    },
+    "Total Gate Charge": {
+      "symbol": "Qg",
+      "testConditions": "VDS = 50 V, VGS = 4.5 V, ID = 20 A",
+      "min": null,
+      "typ": 66,
+      "max": null,
+      "unit": "nC"
+    },
+    "Gate-Source Charge": {
+      "symbol": "Qgs",
+      "testConditions": "VDS = 50 V, VGS = 4.5 V, ID = 20 A",
+      "min": null,
+      "typ": 18,
+      "max": null,
+      "unit": "nC"
+    },
+    "Gate-Drain Charge": {
+      "symbol": "Qgd",
+      "testConditions": "VDS = 50 V, VGS = 4.5 V, ID = 20 A",
+      "min": null,
+      "typ": 28,
+      "max": null,
+      "unit": "nC"
+    },
+    "Turn-On Delay Time": {
+      "symbol": "td(on)",
+      "testConditions": "VDS = 50 V, RG = 2.5 Ω, ID = 20 A",
+      "min": null,
+      "typ": 18,
+      "max": null,
+      "unit": "ns"
+    },
+    "Rise Time": {
+      "symbol": "tr",
+      "testConditions": "VGEN = 10 V, RGEN = 6 Ω",
+      "min": null,
+      "typ": 33,
+      "max": null,
+      "unit": "ns"
+    },
+    "Turn-Off Delay Time": {
+      "symbol": "td(off)",
+      "testConditions": "VGEN = 10 V, RGEN = 6 Ω",
+      "min": null,
+      "typ": 182,
+      "max": null,
+      "unit": "ns"
+    },
+    "Fall Time": {
+      "symbol": "tf",
+      "testConditions": "VGEN = 10 V, RGEN = 6 Ω",
+      "min": null,
+      "typ": 161,
+      "max": null,
+      "unit": "ns"
+    },
+    "Input Capacitance": {
+      "symbol": "Ciss",
+      "testConditions": "VDS = 15 V, VGS = 0 V, f = 1 MHz",
+      "min": null,
+      "typ": 5720,
+      "max": null,
+      "unit": "pF"
+    },
+    "Output Capacitance": {
+      "symbol": "Coss",
+      "testConditions": "VDS = 15 V, VGS = 0 V, f = 1 MHz",
+      "min": null,
+      "typ": 3934,
+      "max": null,
+      "unit": "pF"
+    },
+    "Reverse Transfer Capacitance": {
+      "symbol": "Crss",
+      "testConditions": "VDS = 15 V, VGS = 0 V, f = 1 MHz",
+      "min": null,
+      "typ": 1090,
+      "max": null,
+      "unit": "pF"
+    }
+  },
+  "packageInformation": {
+    "A": { "min": 4.3, "max": 4.57, "unit": "mm" },
+    "A1": { "min": 0, "max": 0.25, "unit": "mm" },
+    "A2": { "min": 2.47, "max": 2.57, "unit": "mm" },
+    "b": { "min": 0.69, "max": 0.94, "unit": "mm" },
+    "b2": { "min": 1.17, "max": 1.45, "unit": "mm" },
+    "c": { "min": 0.48, "max": 0.6, "unit": "mm" },
+    "c2": { "min": 1.17, "max": 1.37, "unit": "mm" },
+    "D": { "min": 9.8, "max": 10.3, "unit": "mm" },
+    "D1": { "min": 8.64, "max": 9.65, "unit": "mm" },
+    "D2": { "min": 7.12, "max": 7.62, "unit": "mm" },
+    "E": { "min": 9.7, "max": 10.54, "unit": "mm" },
+    "E1": { "min": 8, "max": 8.4, "unit": "mm" },
+    "e": { "min": 2.54, "max": 2.54, "unit": "mm" },
+    "H": { "min": 14.99, "max": 15.49, "unit": "mm" },
+    "L": { "min": 1.78, "max": 2.79, "unit": "mm" },
+    "L1": { "min": 1.02, "max": 1.52, "unit": "mm" },
+    "L2": { "min": null, "max": 1.75, "unit": "mm" },
+    "L3": { "min": null, "max": 0.254, "unit": "mm" },
+    "θ": { "min": 0, "max": 8, "unit": "°" }
+  }
+}

@@ -36,6 +36,7 @@ OPENAI_API_KEY=your_openai_api_key
 -anhi
 -epc_space
 -apm
+-slkor
 
 ## TODO
 
@@ -43,8 +44,6 @@ OPENAI_API_KEY=your_openai_api_key
 - Adjust and fix the errors.
   Ideas for data quiality improvement:
   - Improve prompt
-  - Process images one by one instead of in batches
-  - Give Examples
-  - Use gpt-4o instead of gpt-4o-mini
+  - Give more examples
 - Discuss the final output.
 - Process all files.

@@ -1,0 +1,329 @@
+{
+  "componentName": "EPC7018G",
+  "manufacturer": "EPC Space",
+  "description": "Rad Hard eGaN® 100 V, 80 A, 6.0 mΩ Surface Mount",
+  "features": [
+    "Ultra-low QG For High Efficiency",
+    "Logic Level",
+    "Light Weight – 0.170 grams",
+    "New Compact Hermetic Package with Dual Gate",
+    "Source Sense Pin",
+    "Total Dose – Rated to 1000 krad",
+    "Single Event – SEE immunity for LET of 85 MeV/mg/cm² with VDS up to 100% of rated Breakdown",
+    "Low Dose Rate at 100 mRad/sec – Maintains Pre-Rad specification",
+    "Neutron – Maintains Pre-Rad specification for up to 3 x 10¹⁵ Neutrons/cm²"
+  ],
+  "applications": [
+    "Satellite and Avionics",
+    "Deep Space Probes",
+    "High Speed Rad Hard DC-DC Conversion",
+    "Rad Hard Motor Controllers",
+    "Nuclear Facilities"
+  ],
+  "thermalCharacteristics": {
+    "RθJA": {
+      "parameterConditions": "Thermal Resistance Junction to Ambient (Note 3)",
+      "value": 48,
+      "units": "°C/W"
+    },
+    "RθJC": {
+      "parameterConditions": "Thermal Resistance Junction to Case",
+      "value": 1.53,
+      "units": "°C/W"
+    }
+  },
+  "ioPinAssignment": [
+    { "pin": 1, "symbol": "G", "description": "Gate" },
+    { "pin": 2, "symbol": "G", "description": "Gate" },
+    { "pin": 3, "symbol": "D", "description": "Drain" },
+    { "pin": 4, "symbol": "S", "description": "Source" },
+    { "pin": 5, "symbol": "SS", "description": "Source Sense" }
+  ],
+  "absoluteMaximumRatings": {
+    "VDS": {
+      "parameterConditions": "Drain to Source Voltage (Note 1)",
+      "value": 100,
+      "units": "V"
+    },
+    "VDS_pulse": {
+      "parameterConditions": "Drain-to-Source Voltage (up to 10,000 5 ms pulses at 150°C)",
+      "value": 120,
+      "units": "V"
+    },
+    "ID": {
+      "parameterConditions": "Continuous Drain Current ID @ VGS = 5 V",
+      "value": 80,
+      "units": "A"
+    },
+    "IDM": {
+      "parameterConditions": "Single-Pulse Drain Current tpulse = 300 μs",
+      "value": 345,
+      "units": "A"
+    },
+    "VGS": {
+      "parameterConditions": "Gate to Source Voltage (Note 2)",
+      "value": "+6 / -4",
+      "units": "V"
+    },
+    "TJ_TSTG": {
+      "parameterConditions": "Operating and Storage Junction Temperature Range",
+      "value": "-55 to +150",
+      "units": "°C"
+    },
+    "TSOL": {
+      "parameterConditions": "Package Mounting Surface Temperature",
+      "value": 260,
+      "units": "°C"
+    },
+    "ESD": { "parameterConditions": "ESD Class", "value": "2B", "units": null }
+  },
+  "staticCharacteristics": {
+    "BVDSS": {
+      "parameter": "Drain to Source Voltage",
+      "symbol": "BVDSS",
+      "testConditions": "VGS = 0 V, ID = 0.9 mA",
+      "min": 100,
+      "typ": null,
+      "max": null,
+      "units": "V"
+    },
+    "IDSS": {
+      "parameter": "Drain to Source Leakage",
+      "symbol": "IDSS",
+      "testConditions": "VDS = 100 V, VGS = 0 V, TC = 25°C",
+      "min": 0.001,
+      "typ": null,
+      "max": 0.4,
+      "units": "mA"
+    },
+    "IGSS": {
+      "parameter": "Gate to Source Forward Leakage",
+      "symbol": "IGSS",
+      "testConditions": "VGS = 5 V, TC = 25°C",
+      "min": 0.01,
+      "typ": null,
+      "max": 0.5,
+      "units": "mA"
+    },
+    "VGS(th)": {
+      "parameter": "Gate to Source Threshold Voltage",
+      "symbol": "VGS(th)",
+      "testConditions": "VDS = VGS, ID = 12 mA, TC = 25°C",
+      "min": 0.8,
+      "typ": 1.2,
+      "max": 2.5,
+      "units": "V"
+    },
+    "ΔVGS(th)": {
+      "parameter": "Gate to Source Threshold Voltage Temperature Coefficient",
+      "symbol": "ΔVGS(th)",
+      "testConditions": "VDS = VGS, ID = 12 mA, -55°C < TA < 150°C",
+      "min": -1.9,
+      "typ": null,
+      "max": null,
+      "units": "mV/°C"
+    },
+    "RDS(on)": {
+      "parameter": "Drain to Source Resistance (Note 4)",
+      "symbol": "RDS(on)",
+      "testConditions": "VGS = 5 V, ID = 40 A, TC = 25°C",
+      "min": null,
+      "typ": 5.2,
+      "max": 6,
+      "units": "mΩ"
+    },
+    "VSD": {
+      "parameter": "Source to Drain Forward Voltage (Note 5)",
+      "symbol": "VSD",
+      "testConditions": "IS = 0.5 A, VGS = 0 V, TC = 25°C",
+      "min": null,
+      "typ": 1.8,
+      "max": null,
+      "units": "V"
+    }
+  },
+  "dynamicCharacteristics": {
+    "CISS": {
+      "parameter": "Input Capacitance",
+      "symbol": "CISS",
+      "testConditions": "VDS = 50 V, VGS = 0 V",
+      "min": null,
+      "typ": 1240,
+      "max": null,
+      "units": "pF"
+    },
+    "COSS": {
+      "parameter": "Output Capacitance",
+      "symbol": "COSS",
+      "testConditions": "VDS = 50 V, VGS = 0 V",
+      "min": null,
+      "typ": 740,
+      "max": null,
+      "units": "pF"
+    },
+    "COSS(ER)": {
+      "parameter": "Effective Output Capacitance, Energy Related",
+      "symbol": "COSS(ER)",
+      "testConditions": "VDS = 0 to 50 V, VGS = 0 V",
+      "min": null,
+      "typ": 970,
+      "max": null,
+      "units": "pF"
+    },
+    "COSS(TR)": {
+      "parameter": "Effective Output Capacitance, Time Related",
+      "symbol": "COSS(TR)",
+      "testConditions": "VDS = 0 to 50 V, VGS = 0 V",
+      "min": null,
+      "typ": 1250,
+      "max": null,
+      "units": "pF"
+    },
+    "QG": {
+      "parameter": "Total Gate Charge",
+      "symbol": "QG",
+      "testConditions": "VDS = 50 V, VGS = 5 V, ID = 40 A",
+      "min": null,
+      "typ": 11.7,
+      "max": null,
+      "units": "nC"
+    },
+    "QGS": {
+      "parameter": "Gate to Source Charge",
+      "symbol": "QGS",
+      "testConditions": "VDS = 50 V, ID = 40 A",
+      "min": null,
+      "typ": 4,
+      "max": null,
+      "units": "nC"
+    },
+    "QGD": {
+      "parameter": "Gate to Drain Charge",
+      "symbol": "QGD",
+      "testConditions": "VDS = 50 V, ID = 40 A",
+      "min": null,
+      "typ": 2.1,
+      "max": null,
+      "units": "nC"
+    },
+    "QOSS": {
+      "parameter": "Output Charge (Note 6)",
+      "symbol": "QOSS",
+      "testConditions": "VDS = 50 V, VGS = 0 V",
+      "min": null,
+      "typ": 63,
+      "max": null,
+      "units": "nC"
+    },
+    "QRR": {
+      "parameter": "Source to Drain Recovery Charge",
+      "symbol": "QRR",
+      "testConditions": null,
+      "min": null,
+      "typ": 0,
+      "max": null,
+      "units": "nC"
+    }
+  },
+  "radiationCharacteristics": {
+    "VDSMAX": {
+      "parameter": "Maximum Drain to Source Voltage",
+      "symbol": "VDSMAX",
+      "testConditions": "VGS = 0 V, ID = 0.9 mA",
+      "min": null,
+      "typ": null,
+      "max": 100,
+      "units": "V"
+    },
+    "VGS(th)": {
+      "parameter": "Gate to Source Threshold Voltage",
+      "symbol": "VGS(th)",
+      "testConditions": "VDS = VGS, ID = 12 mA",
+      "min": 0.8,
+      "typ": 1.2,
+      "max": 2.5,
+      "units": "V"
+    },
+    "IDSS": {
+      "parameter": "Drain to Source Leakage",
+      "symbol": "IDSS",
+      "testConditions": "VDS = 100 V, VGS = 0 V",
+      "min": 0.001,
+      "typ": null,
+      "max": 0.4,
+      "units": "mA"
+    },
+    "IGSS": {
+      "parameter": "Gate to Source Forward Leakage",
+      "symbol": "IGSS",
+      "testConditions": "VGS = 5 V",
+      "min": 0.01,
+      "typ": null,
+      "max": 0.5,
+      "units": "mA"
+    },
+    "RDS(on)": {
+      "parameter": "Drain to Source Resistance (Note 4)",
+      "symbol": "RDS(on)",
+      "testConditions": "ID = 40 A, VGS = 5 V",
+      "min": null,
+      "typ": 5.2,
+      "max": 6,
+      "units": "mΩ"
+    }
+  },
+  "typicalSingleEventEffectSafeOperatingArea": [
+    {
+      "test": "Xe",
+      "environment": { "LET": 50, "range": 131, "energy": 1653 },
+      "VDSVoltage": { "VDS": 100, "VGS": 0 }
+    },
+    {
+      "test": "Au",
+      "environment": { "LET": 83.7, "range": 130, "energy": 2482 },
+      "VDSVoltage": { "VDS": 100, "VGS": 0 }
+    }
+  ],
+  "packageOutlineAndDimensions": {
+    "A": {
+      "inches": { "min": 0.028, "max": 0.038 },
+      "millimeters": { "min": 0.711, "max": 0.965 }
+    },
+    "B": {
+      "inches": { "min": 0.075, "max": 0.085 },
+      "millimeters": { "min": 1.905, "max": 2.159 }
+    },
+    "C": {
+      "inches": { "min": 0.025, "max": 0.035 },
+      "millimeters": { "min": 0.635, "max": 0.889 }
+    },
+    "D": {
+      "inches": { "min": 0.015, "max": 0.025 },
+      "millimeters": { "min": 0.381, "max": 0.635 }
+    },
+    "E": {
+      "inches": { "min": 0.051, "max": 0.061 },
+      "millimeters": { "min": 1.295, "max": 1.549 }
+    },
+    "F": {
+      "inches": { "min": 0.024, "max": 0.034 },
+      "millimeters": { "min": 0.61, "max": 0.864 }
+    },
+    "G": {
+      "inches": { "min": 0.07, "max": 0.08 },
+      "millimeters": { "min": 1.778, "max": 2.032 }
+    },
+    "H": {
+      "inches": { "min": 0.078, "max": 0.088 },
+      "millimeters": { "min": 1.981, "max": 2.235 }
+    },
+    "J": {
+      "inches": { "min": 0.215, "max": 0.225 },
+      "millimeters": { "min": 5.461, "max": 5.715 }
+    },
+    "K": {
+      "inches": { "min": 0.311, "max": 0.321 },
+      "millimeters": { "min": 7.899, "max": 8.153 }
+    }
+  }
+}
