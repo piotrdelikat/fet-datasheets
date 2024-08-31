@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { readValuesFromImage, readValuesFromImages } from './utils/imgToData';
 import { convertPdfToImage } from './utils/pdfToImg';
-import { extractWihGoogleGemini } from './utils/google';
-import { preselectImages } from './utils/openAI';
+import { preselectImages, readVplateau } from './utils/openAI/openAI';
+import { readValuesFromImagesAnthropic } from './utils/anthropic/extractData';
+import { preselectPagesAnthropic } from './utils/anthropic/preselectPages';
+import { readVplateauAnthropic } from './utils/anthropic/readCharts';
+import { preselectPagesOpenAI } from './utils/openAI/preselectPages';
 
 const handlePdfConversion = async (mfr: string, mpn: string) => {
   try {
@@ -14,7 +16,10 @@ const handlePdfConversion = async (mfr: string, mpn: string) => {
   }
 };
 
-const processDocuments = async (directoryPath: string, model = 'gpt-4o') => {
+const processDocuments = async (
+  directoryPath: string,
+  model: string = 'claude-3-5-sonnet-20240620'
+) => {
   const pdfFiles = fs
     .readdirSync(directoryPath)
     .filter((file) => file.endsWith('.pdf'));
@@ -28,7 +33,6 @@ const processDocuments = async (directoryPath: string, model = 'gpt-4o') => {
 
     const intermediatePath = path.join('intermediate', mfr, mpn);
     const imagesPath = path.join(intermediatePath, 'images');
-    const omittedPath = path.join(imagesPath, 'omitted');
     const llmExtractPath = path.join(
       intermediatePath,
       `llm_extract_${model}.json`
@@ -47,20 +51,46 @@ const processDocuments = async (directoryPath: string, model = 'gpt-4o') => {
       console.log(`Images already exist for: ${mfr}/${mpn}`);
     }
 
-    // Check if omittedPath exists, if not run preselectImages
-    if (!fs.existsSync(omittedPath)) {
-      await preselectImages(intermediatePath);
-    } else {
-      console.log(`Omitted images already processed for: ${mfr}/${mpn}`);
-    }
+    const preselectionResult = await preselectPagesOpenAI(imagesPath); // await preselectPagesAnthropic(imagesPath);
+    let jsonOutput: any = {};
 
     //Check if the llm_extract.json file exists, if not, read values from images
     if (!fs.existsSync(llmExtractPath)) {
-      await readValuesFromImages(imagesPath, model);
-      // extractWihGoogleGemini(imagesPath);
+      // Anthropic
+      const dataReadResult = await readValuesFromImagesAnthropic(
+        imagesPath,
+        preselectionResult.dataPages,
+        model
+      );
+      jsonOutput = dataReadResult;
     } else {
       console.log(`Values already extracted for: ${mfr}/${mpn}`);
     }
+
+    if (preselectionResult.chartPages.V_plateau) {
+      const vPlateauResult = await readVplateauAnthropic(
+        imagesPath,
+        preselectionResult.chartPages.V_plateau,
+        model
+      );
+      console.log(vPlateauResult);
+      jsonOutput['V_plateau'] = vPlateauResult.Vplateau;
+    }
+
+    const jsonFolderPath = intermediatePath;
+    const outputFileName = `llm_extract_${model}.json`;
+
+    fs.writeFileSync(
+      path.join(jsonFolderPath, outputFileName),
+      JSON.stringify(jsonOutput, null, 0)
+    );
+
+    console.log(
+      `Analysis complete. Output written to: ${path.join(
+        jsonFolderPath,
+        outputFileName
+      )}`
+    );
   }
 };
 
@@ -75,37 +105,17 @@ const processAllManufacturers = () => {
   });
 };
 
-const countLLMCost = () => {
-  const datasheetsPath = './datasheets';
-  const costPerFile = 0.1;
-  let totalCost = 0;
-  let totalFiles = 0;
-
-  const manufacturers = fs.readdirSync(datasheetsPath);
-
-  manufacturers.forEach((mfr) => {
-    const mfrPath = path.join(datasheetsPath, mfr);
-    if (fs.lstatSync(mfrPath).isDirectory()) {
-      const files = fs.readdirSync(mfrPath);
-      totalFiles += files.length;
-      totalCost += files.length * costPerFile;
-      console.log(`Manufacturer: ${mfr}, Number of files: ${files.length}`);
-    }
-  });
-
-  console.log(`Total number of files: ${totalFiles}`);
-  console.log(`Total LLM cost: $${totalCost.toFixed(2)}`);
-};
-
 // Call processDocuments on individual directories for testing
 // processDocuments('./datasheets/analog_power_inc.');
 // processDocuments('./datasheets/anhi');
 // processDocuments('./datasheets/apm');
-processDocuments('./datasheets/epc_space');
-// processDocuments('./datasheets/slkor');
+// processDocuments('./datasheets/epc_space');
+//processDocuments('./datasheets/slkor');
+// processDocuments('./datasheets/ts');
 
-// Log approximate LLM cost
-// countLLMCost();
+// readVplateau('./intermediate/epc_space/EPC7018GC', 'EPC7018GC.5.png').then(
+//   (res) => console.log(res)
+// );
 
 // Call processDocuments on all directories
 //processAllManufacturers();

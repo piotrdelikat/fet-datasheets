@@ -1,1 +1,235 @@
-{"componentName":"AMR448N","manufacturer":"Analog Power","description":"N-Channel 100-V (D-S) MOSFET","keyFeatures":["Low R_DS(on) trench technology","Low thermal impedance","Fast switching speed"],"typicalApplications":["LED Inverter Circuits","DC/DC Conversion Circuits","Motor drives"],"productSummary":{"V_DS (V)":100,"R_DS(on) (mΩ)":"5.6 @ V_GS = 10V, 7 @ V_GS = 6.5V","I_D (A)":"80°C"},"package":"DFN5X6-8L","absoluteMaximumRatings":{"Drain-Source Voltage":{"symbol":"V_DS","limit":100,"units":"V"},"Gate-Source Voltage":{"symbol":"V_GS","limit":"±20","units":"V"},"Continuous Drain Current":{"symbol":"I_D","T_C=70°C":{"value":80,"units":"A"},"T_A=25°C":{"value":24,"units":"A"},"T_A=70°C":{"value":20,"units":"A"}},"Pulsed Drain Current":{"symbol":"I_DM","limit":100,"units":"A"},"Continuous Source Current (Diode Conduction)":{"symbol":"I_S","limit":6.6,"units":"A"},"Power Dissipation":{"symbol":"P_D","T_C=25°C":{"value":125,"units":"W"},"T_C=70°C":{"value":80,"units":"W"},"T_A=25°C":{"value":5,"units":"W"},"T_A=70°C":{"value":3.2,"units":"W"}},"Operating Junction and Storage Temperature Range":{"symbol":"T_J, T_stg","limit":"-55 to 150","units":"°C"}},"thermalResistanceRatings":{"Maximum Junction-to-Ambient":{"symbol":"R_θJA","t <= 10 sec":{"value":25,"units":"°C/W"},"Steady State":{"value":65,"units":"°C/W"}},"Maximum Junction-to-Case":{"symbol":"R_θJC","Steady State":{"value":1,"units":"°C/W"}}},"electricalCharacteristics":{"Gate-Source Threshold Voltage":{"symbol":"V_GS(th)","testConditions":"V_DS = V_GS, I_D = 250 μA","min":1,"typ":null,"max":null,"unit":"V"},"Gate-Body Leakage":{"symbol":"I_GSS","testConditions":"V_DS = 0 V, V_GS = ±20 V","min":null,"typ":null,"max":"±100","unit":"nA"},"Zero Gate Voltage Drain Current":{"symbol":"I_DSS","testConditions":["V_DS = 80 V, V_GS = 0 V","V_DS = 80 V, V_GS = 0 V, T_J = 55°C"],"min":null,"typ":null,"max":[1,10],"unit":"μA"},"On-State Drain Current":{"symbol":"I_D(on)","testConditions":"V_DS = 5 V, V_GS = 10 V","min":30,"typ":null,"max":null,"unit":"A"},"Drain-Source On-Resistance":{"symbol":"R_DS(on)","testConditions":["V_GS = 10 V, I_D = 12 A","V_GS = 6.5 V, I_D = 10 A"],"min":null,"typ":[5.6,7],"max":null,"unit":"mΩ"},"Forward Transconductance":{"symbol":"g_fs","testConditions":"V_DS = 50 V, I_D = 12 A","min":null,"typ":53,"max":null,"unit":"S"},"Diode Forward Voltage":{"symbol":"V_SD","testConditions":"I_S = 3.3 A, V_GS = 0 V","min":null,"typ":0.73,"max":null,"unit":"V"},"Total Gate Charge":{"symbol":"Q_g","testConditions":"V_DS = 50 V, V_GS = 6.5 V, I_D = 12 A","min":null,"typ":32,"max":null,"unit":"nC"},"Gate-Source Charge":{"symbol":"Q_gs","testConditions":"V_DS = 50 V, V_GS = 6.5 V, I_D = 12 A","min":null,"typ":9.2,"max":null,"unit":"nC"},"Gate-Drain Charge":{"symbol":"Q_gd","testConditions":"V_DS = 50 V, V_GS = 6.5 V, I_D = 12 A","min":null,"typ":15,"max":null,"unit":"nC"},"Turn-On Delay Time":{"symbol":"t_d(on)","testConditions":"V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω","min":null,"typ":20,"max":null,"unit":"ns"},"Rise Time":{"symbol":"t_r","testConditions":"V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω","min":null,"typ":22,"max":null,"unit":"ns"},"Turn-Off Delay Time":{"symbol":"t_d(off)","testConditions":"V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω","min":null,"typ":51,"max":null,"unit":"ns"},"Fall Time":{"symbol":"t_f","testConditions":"V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω","min":null,"typ":77,"max":null,"unit":"ns"},"Input Capacitance":{"symbol":"C_iss","testConditions":"V_DS = 50 V, V_GS = 0 V, f = 1 MHz","min":null,"typ":2681,"max":null,"unit":"pF"},"Output Capacitance":{"symbol":"C_oss","testConditions":"V_DS = 50 V, V_GS = 0 V, f = 1 MHz","min":null,"typ":592,"max":null,"unit":"pF"},"Reverse Transfer Capacitance":{"symbol":"C_rss","testConditions":"V_DS = 50 V, V_GS = 0 V, f = 1 MHz","min":null,"typ":20,"max":null,"unit":"pF"}},"packageInformation":{"dimensionsInMillimeters":{"A":{"min":0.85,"nom":0.95,"max":1},"A1":{"min":0,"nom":0.05,"max":0.1},"b":{"min":0.3,"nom":0.4,"max":0.5},"c":{"min":0.15,"nom":0.2,"max":0.25},"D":{"nom":5.2,"BSC":true},"D1":{"nom":4.35,"BSC":true},"E":{"nom":5.55,"BSC":true},"E1":{"nom":6.05,"BSC":true},"E2":{"nom":3.62,"BSC":true},"e":{"nom":1.27,"BSC":true},"L":{"min":0.45,"nom":0.55,"max":0.65},"L1":{"min":0,"nom":null,"max":0.15},"L2":{"nom":0.68,"REF":true},"θ":{"min":0,"nom":null,"max":10}},"dimensionsInInches":{"A":{"min":0.033,"nom":0.037,"max":0.039},"A1":{"min":0,"nom":0.002,"max":0.004},"b":{"min":0.012,"nom":0.016,"max":0.02},"c":{"min":0.006,"nom":0.008,"max":0.01},"D":{"nom":0.205,"BSC":true},"D1":{"nom":0.171,"BSC":true},"E":{"nom":0.219,"BSC":true},"E1":{"nom":0.238,"BSC":true},"E2":{"nom":0.143,"BSC":true},"e":{"nom":0.05,"BSC":true},"L":{"min":0.018,"nom":0.022,"max":0.026},"L1":{"min":0,"nom":null,"max":0.006},"L2":{"nom":0.027,"REF":true},"θ":{"min":0,"nom":null,"max":10}}}}
+{
+  "componentName": "AMR448N",
+  "manufacturer": "Analog Power",
+  "description": "N-Channel 100-V (D-S) MOSFET",
+  "keyFeatures": [
+    "Low R_DS(on) trench technology",
+    "Low thermal impedance",
+    "Fast switching speed"
+  ],
+  "typicalApplications": [
+    "LED Inverter Circuits",
+    "DC/DC Conversion Circuits",
+    "Motor drives"
+  ],
+  "productSummary": {
+    "V_DS (V)": 100,
+    "R_DS(on) (mΩ)": "5.6 @ V_GS = 10V, 7 @ V_GS = 6.5V",
+    "I_D (A)": "80°C"
+  },
+  "package": "DFN5X6-8L",
+  "absoluteMaximumRatings": {
+    "Drain-Source Voltage": { "symbol": "V_DS", "limit": 100, "units": "V" },
+    "Gate-Source Voltage": { "symbol": "V_GS", "limit": "±20", "units": "V" },
+    "Continuous Drain Current": {
+      "symbol": "I_D",
+      "T_C=70°C": { "value": 80, "units": "A" },
+      "T_A=25°C": { "value": 24, "units": "A" },
+      "T_A=70°C": { "value": 20, "units": "A" }
+    },
+    "Pulsed Drain Current": { "symbol": "I_DM", "limit": 100, "units": "A" },
+    "Continuous Source Current (Diode Conduction)": {
+      "symbol": "I_S",
+      "limit": 6.6,
+      "units": "A"
+    },
+    "Power Dissipation": {
+      "symbol": "P_D",
+      "T_C=25°C": { "value": 125, "units": "W" },
+      "T_C=70°C": { "value": 80, "units": "W" },
+      "T_A=25°C": { "value": 5, "units": "W" },
+      "T_A=70°C": { "value": 3.2, "units": "W" }
+    },
+    "Operating Junction and Storage Temperature Range": {
+      "symbol": "T_J, T_stg",
+      "limit": "-55 to 150",
+      "units": "°C"
+    }
+  },
+  "thermalResistanceRatings": {
+    "Maximum Junction-to-Ambient": {
+      "symbol": "R_θJA",
+      "t <= 10 sec": { "value": 25, "units": "°C/W" },
+      "Steady State": { "value": 65, "units": "°C/W" }
+    },
+    "Maximum Junction-to-Case": {
+      "symbol": "R_θJC",
+      "Steady State": { "value": 1, "units": "°C/W" }
+    }
+  },
+  "electricalCharacteristics": {
+    "Gate-Source Threshold Voltage": {
+      "symbol": "V_GS(th)",
+      "testConditions": "V_DS = V_GS, I_D = 250 μA",
+      "min": 1,
+      "typ": null,
+      "max": null,
+      "unit": "V"
+    },
+    "Gate-Body Leakage": {
+      "symbol": "I_GSS",
+      "testConditions": "V_DS = 0 V, V_GS = ±20 V",
+      "min": null,
+      "typ": null,
+      "max": "±100",
+      "unit": "nA"
+    },
+    "Zero Gate Voltage Drain Current": {
+      "symbol": "I_DSS",
+      "testConditions": [
+        "V_DS = 80 V, V_GS = 0 V",
+        "V_DS = 80 V, V_GS = 0 V, T_J = 55°C"
+      ],
+      "min": null,
+      "typ": null,
+      "max": [1, 10],
+      "unit": "μA"
+    },
+    "On-State Drain Current": {
+      "symbol": "I_D(on)",
+      "testConditions": "V_DS = 5 V, V_GS = 10 V",
+      "min": 30,
+      "typ": null,
+      "max": null,
+      "unit": "A"
+    },
+    "Drain-Source On-Resistance": {
+      "symbol": "R_DS(on)",
+      "testConditions": ["V_GS = 10 V, I_D = 12 A", "V_GS = 6.5 V, I_D = 10 A"],
+      "min": null,
+      "typ": [5.6, 7],
+      "max": null,
+      "unit": "mΩ"
+    },
+    "Forward Transconductance": {
+      "symbol": "g_fs",
+      "testConditions": "V_DS = 50 V, I_D = 12 A",
+      "min": null,
+      "typ": 53,
+      "max": null,
+      "unit": "S"
+    },
+    "Diode Forward Voltage": {
+      "symbol": "V_SD",
+      "testConditions": "I_S = 3.3 A, V_GS = 0 V",
+      "min": null,
+      "typ": 0.73,
+      "max": null,
+      "unit": "V"
+    },
+    "Total Gate Charge": {
+      "symbol": "Q_g",
+      "testConditions": "V_DS = 50 V, V_GS = 6.5 V, I_D = 12 A",
+      "min": null,
+      "typ": 32,
+      "max": null,
+      "unit": "nC"
+    },
+    "Gate-Source Charge": {
+      "symbol": "Q_gs",
+      "testConditions": "V_DS = 50 V, V_GS = 6.5 V, I_D = 12 A",
+      "min": null,
+      "typ": 9.2,
+      "max": null,
+      "unit": "nC"
+    },
+    "Gate-Drain Charge": {
+      "symbol": "Q_gd",
+      "testConditions": "V_DS = 50 V, V_GS = 6.5 V, I_D = 12 A",
+      "min": null,
+      "typ": 15,
+      "max": null,
+      "unit": "nC"
+    },
+    "Turn-On Delay Time": {
+      "symbol": "t_d(on)",
+      "testConditions": "V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω",
+      "min": null,
+      "typ": 20,
+      "max": null,
+      "unit": "ns"
+    },
+    "Rise Time": {
+      "symbol": "t_r",
+      "testConditions": "V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω",
+      "min": null,
+      "typ": 22,
+      "max": null,
+      "unit": "ns"
+    },
+    "Turn-Off Delay Time": {
+      "symbol": "t_d(off)",
+      "testConditions": "V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω",
+      "min": null,
+      "typ": 51,
+      "max": null,
+      "unit": "ns"
+    },
+    "Fall Time": {
+      "symbol": "t_f",
+      "testConditions": "V_DS = 50 V, R_L = 4.2 Ω, I_D = 12 A, V_GEN = 10 V, R_GEN = 6 Ω",
+      "min": null,
+      "typ": 77,
+      "max": null,
+      "unit": "ns"
+    },
+    "Input Capacitance": {
+      "symbol": "C_iss",
+      "testConditions": "V_DS = 50 V, V_GS = 0 V, f = 1 MHz",
+      "min": null,
+      "typ": 2681,
+      "max": null,
+      "unit": "pF"
+    },
+    "Output Capacitance": {
+      "symbol": "C_oss",
+      "testConditions": "V_DS = 50 V, V_GS = 0 V, f = 1 MHz",
+      "min": null,
+      "typ": 592,
+      "max": null,
+      "unit": "pF"
+    },
+    "Reverse Transfer Capacitance": {
+      "symbol": "C_rss",
+      "testConditions": "V_DS = 50 V, V_GS = 0 V, f = 1 MHz",
+      "min": null,
+      "typ": 20,
+      "max": null,
+      "unit": "pF"
+    }
+  },
+  "packageInformation": {
+    "dimensionsInMillimeters": {
+      "A": { "min": 0.85, "nom": 0.95, "max": 1 },
+      "A1": { "min": 0, "nom": 0.05, "max": 0.1 },
+      "b": { "min": 0.3, "nom": 0.4, "max": 0.5 },
+      "c": { "min": 0.15, "nom": 0.2, "max": 0.25 },
+      "D": { "nom": 5.2, "BSC": true },
+      "D1": { "nom": 4.35, "BSC": true },
+      "E": { "nom": 5.55, "BSC": true },
+      "E1": { "nom": 6.05, "BSC": true },
+      "E2": { "nom": 3.62, "BSC": true },
+      "e": { "nom": 1.27, "BSC": true },
+      "L": { "min": 0.45, "nom": 0.55, "max": 0.65 },
+      "L1": { "min": 0, "nom": null, "max": 0.15 },
+      "L2": { "nom": 0.68, "REF": true },
+      "θ": { "min": 0, "nom": null, "max": 10 }
+    },
+    "dimensionsInInches": {
+      "A": { "min": 0.033, "nom": 0.037, "max": 0.039 },
+      "A1": { "min": 0, "nom": 0.002, "max": 0.004 },
+      "b": { "min": 0.012, "nom": 0.016, "max": 0.02 },
+      "c": { "min": 0.006, "nom": 0.008, "max": 0.01 },
+      "D": { "nom": 0.205, "BSC": true },
+      "D1": { "nom": 0.171, "BSC": true },
+      "E": { "nom": 0.219, "BSC": true },
+      "E1": { "nom": 0.238, "BSC": true },
+      "E2": { "nom": 0.143, "BSC": true },
+      "e": { "nom": 0.05, "BSC": true },
+      "L": { "min": 0.018, "nom": 0.022, "max": 0.026 },
+      "L1": { "min": 0, "nom": null, "max": 0.006 },
+      "L2": { "nom": 0.027, "REF": true },
+      "θ": { "min": 0, "nom": null, "max": 10 }
+    }
+  }
+}

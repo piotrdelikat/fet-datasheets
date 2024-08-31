@@ -1,0 +1,566 @@
+[
+  {
+    "componentName": "AP80N08D",
+    "manufacturer": "APM (A Power Microelectronics)",
+    "description": "The AP80N08D uses advanced trench technology to provide excellent RDS(ON), low gate charge and operation with gate voltages as low as 4.5V. This device is suitable for use as a Battery protection or in other Switching application.",
+    "generalFeatures": {
+      "VDS": "80V",
+      "ID": "80A",
+      "RDS(ON)": "< 6.5mΩ VGS=10V"
+    },
+    "application": [
+      "Battery protection",
+      "Load switch",
+      "Uninterruptible power supply"
+    ],
+    "packageMarkingAndOrderingInformation": {
+      "productID": "AP80N08D",
+      "pack": "TO-252-3L",
+      "marking": "AP80N08D XXX YYYY",
+      "qty(PCS)": 2500
+    },
+    "absoluteMaximumRatings": {
+      "Tc": "25°C unless otherwise noted",
+      "data": [
+        {
+          "symbol": "VDS",
+          "parameter": "Drain-Source Voltage",
+          "rating": "80",
+          "units": "V",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "VGS",
+          "parameter": "Gate-Source Voltage",
+          "rating": "±20",
+          "units": "V",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "ID@Tc=25°C",
+          "parameter": "Continuous Drain Current, VGS @ 10V",
+          "rating": "80",
+          "units": "A",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "ID@Tc=100°C",
+          "parameter": "Continuous Drain Current, VGS @ 10V",
+          "rating": "42.5",
+          "units": "A",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "IDM",
+          "parameter": "Pulsed Drain Current",
+          "rating": "170",
+          "units": "A",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "EAS",
+          "parameter": "Single Pulse Avalanche Energy",
+          "rating": "57.8",
+          "units": "mJ",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "IAS",
+          "parameter": "Avalanche Current",
+          "rating": "34",
+          "units": "A",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "Pₒ@Tc=25°C",
+          "parameter": "Total Power Dissipation",
+          "rating": "56",
+          "units": "W",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "TSTG",
+          "parameter": "Storage Temperature Range",
+          "rating": "-55 to 150",
+          "units": "°C",
+          "min": "-55",
+          "typ": "null",
+          "max": "150"
+        },
+        {
+          "symbol": "TJ",
+          "parameter": "Operating Junction Temperature Range",
+          "rating": "-55 to 150",
+          "units": "°C",
+          "min": "-55",
+          "typ": "null",
+          "max": "150"
+        },
+        {
+          "symbol": "RθJA",
+          "parameter": "Thermal Resistance Junction-Ambient",
+          "rating": "62",
+          "units": "°C/W",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        },
+        {
+          "symbol": "RθJC",
+          "parameter": "Thermal Resistance Junction-Case",
+          "rating": "2.2",
+          "units": "°C/W",
+          "min": "null",
+          "typ": "null",
+          "max": "null"
+        }
+      ]
+    }
+  },
+  {
+    "componentName": "AP80N08D",
+    "manufacturer": "APM",
+    "specifications": {
+      "Electrical Characteristics (Tj=25°C, unless otherwise noted)": [
+        {
+          "Symbol": "BVDSS",
+          "Parameter": "Drain-Source Breakdown Voltage",
+          "Conditions": "VGS=0V, ID=250uA",
+          "Min": "80",
+          "Typ": "null",
+          "Max": "null",
+          "Unit": "V"
+        },
+        {
+          "Symbol": "RDS(ON)",
+          "Parameter": "Static Drain-Source On-Resistance",
+          "Conditions": "VGS=10V, ID=20A",
+          "Min": "null",
+          "Typ": "4.8",
+          "Max": "6.5",
+          "Unit": "mΩ"
+        },
+        {
+          "Symbol": "RDS(ON)",
+          "Parameter": "Static Drain-Source On-Resistance",
+          "Conditions": "VGS=4.5V, ID=20A",
+          "Min": "null",
+          "Typ": "6.3",
+          "Max": "8.5",
+          "Unit": "mΩ"
+        },
+        {
+          "Symbol": "VGS(th)",
+          "Parameter": "Gate Threshold Voltage",
+          "Conditions": "VGS=VDS, ID=250uA",
+          "Min": "1.0",
+          "Typ": "null",
+          "Max": "2.5",
+          "Unit": "V"
+        },
+        {
+          "Symbol": "IDSS",
+          "Parameter": "Drain-Source Leakage Current",
+          "Conditions": "VDS=64V, VGS=0V, Tj=25°C",
+          "Min": "null",
+          "Typ": "null",
+          "Max": "5",
+          "Unit": "uA"
+        },
+        {
+          "Symbol": "IGSS",
+          "Parameter": "Gate-Source Leakage Current",
+          "Conditions": "VGS=±20V, VDS=0V",
+          "Min": "null",
+          "Typ": "null",
+          "Max": "±100",
+          "Unit": "nA"
+        },
+        {
+          "Symbol": "gfs",
+          "Parameter": "Forward Transconductance",
+          "Conditions": "VDS=5V, ID=20A",
+          "Min": "null",
+          "Typ": "75",
+          "Max": "null",
+          "Unit": "S"
+        },
+        {
+          "Symbol": "Rg",
+          "Parameter": "Gate Resistance",
+          "Conditions": "VDS=0V, VGS=0V, f=1MHz",
+          "Min": "null",
+          "Typ": "null",
+          "Max": "1",
+          "Unit": "Ω"
+        },
+        {
+          "Symbol": "Qg",
+          "Parameter": "Total Gate Charge (10V)",
+          "Conditions": "VDS=40V, VGS=10V, ID=20A",
+          "Min": "null",
+          "Typ": "40",
+          "Max": "null",
+          "Unit": "nC"
+        },
+        {
+          "Symbol": "Qgs",
+          "Parameter": "Gate-Source Charge",
+          "Conditions": "VDS=40V, VGS=10V, ID=20A",
+          "Min": "null",
+          "Typ": "7.2",
+          "Max": "null",
+          "Unit": "nC"
+        },
+        {
+          "Symbol": "Qgd",
+          "Parameter": "Gate-Drain Charge",
+          "Conditions": "VDS=40V, VGS=0V, f=1MHz",
+          "Min": "null",
+          "Typ": "6.5",
+          "Max": "null",
+          "Unit": "nC"
+        },
+        {
+          "Symbol": "Td(on)",
+          "Parameter": "Turn-On Delay Time",
+          "Conditions": "VDD=40V, VGS=10V, RG=3Ω, ID=20A",
+          "Min": "null",
+          "Typ": "8.3",
+          "Max": "null",
+          "Unit": "ns"
+        },
+        {
+          "Symbol": "Tr",
+          "Parameter": "Rise Time",
+          "Conditions": "VDD=40V, VGS=10V, RG=3Ω, ID=20A",
+          "Min": "null",
+          "Typ": "4.2",
+          "Max": "null",
+          "Unit": "ns"
+        },
+        {
+          "Symbol": "Td(off)",
+          "Parameter": "Turn-Off Delay Time",
+          "Conditions": "VDD=40V, VGS=10V, RG=3Ω, ID=20A",
+          "Min": "null",
+          "Typ": "25",
+          "Max": "null",
+          "Unit": "ns"
+        },
+        {
+          "Symbol": "Tf",
+          "Parameter": "Fall Time",
+          "Conditions": "VDD=40V, VGS=10V, RG=3Ω, ID=20A",
+          "Min": "null",
+          "Typ": "6.9",
+          "Max": "null",
+          "Unit": "ns"
+        },
+        {
+          "Symbol": "Ciss",
+          "Parameter": "Input Capacitance",
+          "Conditions": "VDS=40V, VGS=0V, f=1MHz",
+          "Min": "null",
+          "Typ": "2860",
+          "Max": "null",
+          "Unit": "pF"
+        },
+        {
+          "Symbol": "Coss",
+          "Parameter": "Output Capacitance",
+          "Conditions": "VDS=40V, VGS=0V, f=1MHz",
+          "Min": "null",
+          "Typ": "410",
+          "Max": "null",
+          "Unit": "pF"
+        },
+        {
+          "Symbol": "Crss",
+          "Parameter": "Reverse Transfer Capacitance",
+          "Conditions": "VDS=40V, VGS=0V, f=1MHz",
+          "Min": "null",
+          "Typ": "38",
+          "Max": "null",
+          "Unit": "pF"
+        },
+        {
+          "Symbol": "Is",
+          "Parameter": "Continuous Source Current",
+          "Conditions": "VGS=VDS=0V, Force Current",
+          "Min": "null",
+          "Typ": "null",
+          "Max": "48",
+          "Unit": "A"
+        },
+        {
+          "Symbol": "VSD",
+          "Parameter": "Diode Forward Voltage",
+          "Conditions": "VGS=0V, IS=A, Tj=25°C",
+          "Min": "null",
+          "Typ": "0.77",
+          "Max": "1.0",
+          "Unit": "V"
+        },
+        {
+          "Symbol": "trr",
+          "Parameter": "Reverse Recovery Time",
+          "Conditions": "IF=20A, di/dt=100A/μs, Tj=25°C",
+          "Min": "null",
+          "Typ": "27",
+          "Max": "null",
+          "Unit": "ns"
+        },
+        {
+          "Symbol": "Qrr",
+          "Parameter": "Reverse Recovery Charge",
+          "Conditions": "IF=20A, di/dt=100A/μs, Tj=25°C",
+          "Min": "null",
+          "Typ": "89",
+          "Max": "null",
+          "Unit": "nC"
+        }
+      ]
+    }
+  },
+  {
+    "componentName": "AP80N08D",
+    "manufacturer": "APM",
+    "description": "80V N-Channel Enhancement Mode MOSFET",
+    "package": "TO-252-3L",
+    "packageMechanicalData": {
+      "dimensions": {
+        "A": {
+          "min": "2.10",
+          "typ": "2.50",
+          "max": "2.83",
+          "unit": "mm",
+          "inches": { "min": "0.083", "typ": "0.098", "max": "null" }
+        },
+        "A2": {
+          "min": "0",
+          "typ": "0.10",
+          "max": "0.20",
+          "unit": "mm",
+          "inches": { "min": "0", "typ": "0.004", "max": "null" }
+        },
+        "B": {
+          "min": "0.66",
+          "typ": "0.86",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.026", "typ": "0.034", "max": "null" }
+        },
+        "B2": {
+          "min": "5.18",
+          "typ": "5.48",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.202", "typ": "0.216", "max": "null" }
+        },
+        "C": {
+          "min": "0.40",
+          "typ": "0.60",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.016", "typ": "0.024", "max": "null" }
+        },
+        "C2": {
+          "min": "0.44",
+          "typ": "0.58",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.017", "typ": "0.023", "max": "null" }
+        },
+        "D": {
+          "min": "5.90",
+          "typ": "6.30",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.232", "typ": "0.248", "max": "null" }
+        },
+        "D1": {
+          "min": "5.30REF",
+          "typ": "null",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.209REF", "typ": "null", "max": "null" }
+        },
+        "E": {
+          "min": "6.40",
+          "typ": "6.80",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.252", "typ": "0.268", "max": "null" }
+        },
+        "E1": {
+          "min": "4.63",
+          "typ": "4.80",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.182", "typ": "null", "max": "null" }
+        },
+        "G": {
+          "min": "4.47",
+          "typ": "4.67",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.176", "typ": "0.184", "max": "null" }
+        },
+        "H": {
+          "min": "9.50",
+          "typ": "10.70",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.374", "typ": "0.421", "max": "null" }
+        },
+        "L": {
+          "min": "1.09",
+          "typ": "1.21",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.043", "typ": "0.048", "max": "null" }
+        },
+        "L2": {
+          "min": "1.35",
+          "typ": "1.65",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.053", "typ": "0.065", "max": "null" }
+        },
+        "V1": {
+          "min": "7°",
+          "typ": "null",
+          "max": "null",
+          "unit": "degrees",
+          "inches": { "min": "7°", "typ": "null", "max": "null" }
+        },
+        "V2": {
+          "min": "0°",
+          "typ": "6°",
+          "max": "null",
+          "unit": "degrees",
+          "inches": { "min": "0°", "typ": "6°", "max": "null" }
+        }
+      }
+    },
+    "reelSpecification": {
+      "dimensions": {
+        "W": {
+          "min": "15.90",
+          "typ": "16.00",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.626", "typ": "0.630", "max": "null" }
+        },
+        "E": {
+          "min": "1.65",
+          "typ": "1.75",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.065", "typ": "0.069", "max": "null" }
+        },
+        "F": {
+          "min": "7.40",
+          "typ": "7.50",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.291", "typ": "0.295", "max": "null" }
+        },
+        "D0": {
+          "min": "1.40",
+          "typ": "1.50",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.055", "typ": "0.059", "max": "null" }
+        },
+        "D1": {
+          "min": "1.40",
+          "typ": "1.50",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.055", "typ": "0.059", "max": "null" }
+        },
+        "P0": {
+          "min": "3.90",
+          "typ": "4.00",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.154", "typ": "0.157", "max": "null" }
+        },
+        "P1": {
+          "min": "7.90",
+          "typ": "8.00",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.311", "typ": "0.315", "max": "null" }
+        },
+        "P2": {
+          "min": "1.90",
+          "typ": "2.00",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.075", "typ": "0.079", "max": "null" }
+        },
+        "A0": {
+          "min": "6.85",
+          "typ": "6.90",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.270", "typ": "0.272", "max": "null" }
+        },
+        "B0": {
+          "min": "10.45",
+          "typ": "10.50",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.411", "typ": "0.413", "max": "null" }
+        },
+        "K0": {
+          "min": "2.68",
+          "typ": "2.78",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.106", "typ": "0.109", "max": "null" }
+        },
+        "T": {
+          "min": "0.24",
+          "typ": "null",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.009", "typ": "null", "max": "null" }
+        },
+        "t1": {
+          "min": "0.10",
+          "typ": "null",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "0.004", "typ": "null", "max": "null" }
+        },
+        "10P0": {
+          "min": "39.80",
+          "typ": "40.00",
+          "max": "null",
+          "unit": "mm",
+          "inches": { "min": "1.567", "typ": "1.575", "max": "null" }
+        }
+      }
+    }
+  }
+]

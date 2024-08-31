@@ -1,0 +1,210 @@
+{
+  "general_info": {
+    "componentName": "AMIF100S201",
+    "manufacturer": "Analog Power",
+    "description": "N-Channel 100-V (D-S) MOSFET",
+    "key_features": [
+      "Low RDS(on) trench technology",
+      "Low thermal impedance",
+      "Fast switching speed"
+    ],
+    "typical_applications": [
+      "White LED boost converters",
+      "Automotive Systems",
+      "Industrial DC/DC Conversion Circuits"
+    ],
+    "package": "TO-263"
+  },
+  "absolute_maximum_ratings": {
+    "VDS": { "parameter": "Drain-Source Voltage", "value": 100, "unit": "V" },
+    "VGS": { "parameter": "Gate-Source Voltage", "value": 20, "unit": "V" },
+    "ID": {
+      "parameter": "Continuous Drain Current",
+      "value": 200,
+      "unit": "A",
+      "conditions": "Tc=25°C"
+    },
+    "IDM": { "parameter": "Pulsed Drain Current", "value": 800, "unit": "A" },
+    "IS": {
+      "parameter": "Continuous Source Current (Diode Conduction)",
+      "value": 120,
+      "unit": "A",
+      "conditions": "Tc=25°C"
+    },
+    "EAS": { "parameter": "Avalanche Energy", "value": 625, "unit": "mJ" },
+    "PD": {
+      "parameter": "Power Dissipation",
+      "value": 300,
+      "unit": "W",
+      "conditions": "Tc=25°C"
+    },
+    "TJ_TSTG": {
+      "parameter": "Operating Junction and Storage Temperature Range",
+      "value": "-55 to 175",
+      "unit": "°C"
+    }
+  },
+  "thermal_resistance_ratings": {
+    "RθJA": {
+      "parameter": "Maximum Junction-to-Ambient",
+      "value": 62.5,
+      "unit": "°C/W"
+    },
+    "RθJC": {
+      "parameter": "Maximum Junction-to-Case",
+      "value": 0.5,
+      "unit": "°C/W"
+    }
+  },
+  "electrical_characteristics": {
+    "VGS(th)": {
+      "parameter": "Gate-Source Threshold Voltage",
+      "conditions": { "VDS": "VGS", "ID": 250, "unit": "uA" },
+      "min": 1,
+      "typ": null,
+      "max": 100,
+      "unit": "V"
+    },
+    "IDSS": {
+      "parameter": "Zero Gate Voltage Drain Current",
+      "conditions": { "VDS": 80, "VGS": 0, "TC": 55, "unit": "°C" },
+      "min": null,
+      "typ": 1,
+      "max": 10,
+      "unit": "uA"
+    },
+    "ID(on)": {
+      "parameter": "On-State Drain Current",
+      "conditions": { "VGS": 5, "VDS": 10, "TC": 55, "unit": "°C" },
+      "min": 300,
+      "typ": null,
+      "max": null,
+      "unit": "A"
+    },
+    "RDS(on)": {
+      "parameter": "Drain-Source On-Resistance",
+      "conditions": { "VGS": 10, "ID": 45, "unit": "A" },
+      "min": null,
+      "typ": 4,
+      "max": null,
+      "unit": "mΩ"
+    },
+    "gFS": {
+      "parameter": "Forward Transconductance",
+      "conditions": { "VDS": 15, "ID": 45, "unit": "A" },
+      "min": 99,
+      "typ": null,
+      "max": null,
+      "unit": "S"
+    },
+    "VSD": {
+      "parameter": "Diode Forward Voltage",
+      "conditions": { "IS": 60, "VGS": 0, "unit": "A" },
+      "min": null,
+      "typ": 1,
+      "max": null,
+      "unit": "V"
+    },
+    "QG": {
+      "parameter": "Total Gate Charge",
+      "conditions": { "VDS": 50, "VGS": 4.5, "ID": 20, "unit": "A" },
+      "min": null,
+      "typ": 66,
+      "max": null,
+      "unit": "nC"
+    },
+    "QGS": {
+      "parameter": "Gate-Source Charge",
+      "conditions": { "VDS": 50, "ID": 20, "unit": "A" },
+      "min": null,
+      "typ": 18,
+      "max": null,
+      "unit": "nC"
+    },
+    "QGD": {
+      "parameter": "Gate-Drain Charge",
+      "conditions": { "VDS": 50, "ID": 20, "unit": "A" },
+      "min": null,
+      "typ": 28,
+      "max": null,
+      "unit": "nC"
+    },
+    "td(on)": {
+      "parameter": "Turn-On Delay Time",
+      "conditions": { "VDS": 50, "RL": 2.5, "unit": "A", "ID": 20 },
+      "min": null,
+      "typ": 18,
+      "max": null,
+      "unit": "ns"
+    },
+    "tr": {
+      "parameter": "Rise Time",
+      "conditions": { "VDD": 50, "RL": 6, "unit": "A", "ID": 20 },
+      "min": null,
+      "typ": 33,
+      "max": null,
+      "unit": "ns"
+    },
+    "td(off)": {
+      "parameter": "Turn-Off Delay Time",
+      "conditions": { "VDD": 50, "RL": 6, "unit": "A", "ID": 20 },
+      "min": null,
+      "typ": 182,
+      "max": null,
+      "unit": "ns"
+    },
+    "tf": {
+      "parameter": "Fall Time",
+      "conditions": { "VDD": 50, "RL": 6, "unit": "A", "ID": 20 },
+      "min": null,
+      "typ": 161,
+      "max": null,
+      "unit": "ns"
+    },
+    "Ciss": {
+      "parameter": "Input Capacitance",
+      "conditions": { "VDS": 15, "VGS": 0, "f": 1, "unit": "MHz" },
+      "min": null,
+      "typ": 5720,
+      "max": null,
+      "unit": "pF"
+    },
+    "Coss": {
+      "parameter": "Output Capacitance",
+      "conditions": { "VDS": 15, "VGS": 0, "f": 1, "unit": "MHz" },
+      "min": null,
+      "typ": 3934,
+      "max": null,
+      "unit": "pF"
+    },
+    "Crss": {
+      "parameter": "Reverse Transfer Capacitance",
+      "conditions": { "VDS": 15, "VGS": 0, "f": 1, "unit": "MHz" },
+      "min": null,
+      "typ": 1090,
+      "max": null,
+      "unit": "pF"
+    }
+  },
+  "package_information": {
+    "dimensions": {
+      "0": { "min": null, "nom": 0, "max": null, "unit": "mm" },
+      "a": { "min": 4.3, "nom": 4.57, "max": 4.72, "unit": "mm" },
+      "a1": { "min": 0, "nom": 0.25, "max": 0.25, "unit": "mm" },
+      "a2": { "min": 2.47, "nom": 2.57, "max": 2.67, "unit": "mm" },
+      "b": { "min": 0.69, "nom": 0.94, "max": 1.19, "unit": "mm" },
+      "b2": { "min": 1.17, "nom": 1.45, "max": 1.73, "unit": "mm" },
+      "c": { "min": 0.48, "nom": 0.6, "max": 0.72, "unit": "mm" },
+      "c2": { "min": 4.17, "nom": 10.3, "max": 10.6, "unit": "mm" },
+      "d": { "min": 8.54, "nom": 8.78, "max": 9.55, "unit": "mm" },
+      "d1": { "min": 7.12, "nom": 7.37, "max": 7.62, "unit": "mm" },
+      "e": { "min": 9.7, "nom": 10.15, "max": 10.54, "unit": "mm" },
+      "e1": { "min": 8, "nom": 8.4, "max": 8.8, "unit": "mm" },
+      "e2": { "min": 14.99, "nom": 15.24, "max": 15.49, "unit": "mm" },
+      "h": { "min": 1.78, "nom": 2.29, "max": 2.79, "unit": "mm" },
+      "l": { "min": 1.02, "nom": 1.52, "max": 2.02, "unit": "mm" },
+      "l1": { "min": null, "nom": 2.54, "max": null, "unit": "mm" },
+      "l3": { "min": null, "nom": 8, "max": null, "unit": "mm" }
+    }
+  }
+}

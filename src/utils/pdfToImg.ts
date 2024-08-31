@@ -23,8 +23,23 @@ export const convertPdfToImage = async (mfr: string, mpn: string) => {
   const filePath = `datasheets/${mfr}/${mpn}.pdf`;
   const convert = fromPath(filePath, options);
 
-  return convert.bulk(-1, { responseType: 'image' }).then((resolve) => {
-    console.log('Page 1 is now converted as image');
-    return resolve;
+  const result = await convert.bulk(-1, { responseType: 'image' });
+  console.log('PDF conversion completed');
+
+  // Rename files to include leading zeros
+  fs.readdirSync(savePath).forEach((file) => {
+    if (file.startsWith(mpn) && file.endsWith('.png')) {
+      const [, pageNumber] = file.match(/\.(\d+)\.png$/) || [];
+      if (pageNumber) {
+        const newFileName = `${mpn}.${pageNumber.padStart(2, '0')}.png`;
+        fs.renameSync(
+          path.join(savePath, file),
+          path.join(savePath, newFileName)
+        );
+      }
+    }
   });
+
+  console.log('File renaming completed');
+  return result;
 };
