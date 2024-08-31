@@ -1,0 +1,251 @@
+{
+  "general_info": {
+    "componentName": "AMR448N",
+    "manufacturer": "Analog Power",
+    "description": "N-Channel 100-V (D-S) MOSFET",
+    "key_features": [
+      "Low rDS(on) trench technology",
+      "Low thermal impedance",
+      "Fast switching speed"
+    ],
+    "typical_applications": [
+      "LED Inverter Circuits",
+      "DC/DC Conversion Circuits",
+      "Motor drives"
+    ],
+    "package": "DFN5X6-8L"
+  },
+  "product_summary": {
+    "VDS": { "value": 100, "unit": "V" },
+    "rDS(on)": [
+      {
+        "value": 5.6,
+        "unit": "mΩ",
+        "conditions": [{ "VGS": 10, "unit": "V" }]
+      },
+      { "value": 7, "unit": "mΩ", "conditions": [{ "VGS": 6.5, "unit": "V" }] }
+    ],
+    "ID": { "value": 80, "unit": "A", "note": "c" }
+  },
+  "absolute_maximum_ratings": {
+    "VDS": {
+      "parameter": "Drain-Source Voltage",
+      "symbol": "VDS",
+      "limit": 100,
+      "unit": "V"
+    },
+    "VGS": {
+      "parameter": "Gate-Source Voltage",
+      "symbol": "VGS",
+      "limit": 20,
+      "unit": "V"
+    },
+    "ID": {
+      "parameter": "Continuous Drain Current",
+      "symbol": "ID",
+      "conditions": [
+        { "TC": 25, "unit": "°C" },
+        { "TC": 70, "unit": "°C" },
+        { "TA": 25, "unit": "°C" },
+        { "TA": 70, "unit": "°C" }
+      ],
+      "limit": [80, 80, 24, 20],
+      "unit": "A"
+    },
+    "IDM": {
+      "parameter": "Pulsed Drain Current",
+      "symbol": "IDM",
+      "limit": 100,
+      "unit": "A",
+      "note": "b"
+    },
+    "IS": {
+      "parameter": "Continuous Source Current (Diode Conduction)",
+      "symbol": "IS",
+      "limit": 6.6,
+      "unit": "A",
+      "note": "a"
+    },
+    "PD": {
+      "parameter": "Power Dissipation",
+      "symbol": "PD",
+      "conditions": [
+        { "TC": 25, "unit": "°C" },
+        { "TC": 70, "unit": "°C" },
+        { "TA": 25, "unit": "°C" },
+        { "TA": 70, "unit": "°C" }
+      ],
+      "limit": [125, 80, 5, 3.2],
+      "unit": "W"
+    },
+    "TJ_TSTG": {
+      "parameter": "Operating Junction and Storage Temperature Range",
+      "symbol": "TJ, Tstg",
+      "limit": "-55 to 150",
+      "unit": "°C"
+    }
+  },
+  "thermal_resistance_ratings": {
+    "RθJA": {
+      "parameter": "Maximum Junction-to-Ambient",
+      "symbol": "RθJA",
+      "conditions": [
+        { "t": "≤ 10 sec", "maximum": 25 },
+        { "t": "Steady State", "maximum": 65 }
+      ],
+      "unit": "°C/W"
+    },
+    "RθJC": {
+      "parameter": "Maximum Junction-to-Case",
+      "symbol": "RθJC",
+      "conditions": [{ "t": "Steady State", "maximum": 1 }],
+      "unit": "°C/W"
+    }
+  },
+  "electrical_characteristics": {
+    "static": {
+      "VGS(th)": {
+        "parameter": "Gate-Source Threshold Voltage",
+        "symbol": "VGS(th)",
+        "conditions": [{ "VDS": "VGS", "ID": 250, "unit": "µA" }],
+        "min": 1,
+        "max": 3,
+        "unit": "V"
+      },
+      "IGSS": {
+        "parameter": "Gate-Body Leakage",
+        "symbol": "IGSS",
+        "conditions": [{ "VDS": 0, "VGS": "±20", "unit": "V" }],
+        "max": 100,
+        "unit": "nA"
+      },
+      "IDSS": {
+        "parameter": "Zero Gate Voltage Drain Current",
+        "symbol": "IDSS",
+        "conditions": [
+          { "VDS": 80, "VGS": 0, "unit": "V" },
+          { "VDS": 80, "VGS": 0, "TJ": 55, "unit": "°C" }
+        ],
+        "max": [1, 10],
+        "unit": "µA"
+      },
+      "ID(on)": {
+        "parameter": "On-State Drain Current",
+        "symbol": "ID(on)",
+        "conditions": [{ "VDS": 5, "VGS": 10, "unit": "V" }],
+        "min": 30,
+        "unit": "A"
+      },
+      "rDS(on)": {
+        "parameter": "Drain-Source On-Resistance",
+        "symbol": "rDS(on)",
+        "conditions": [
+          { "VGS": 10, "ID": 12, "unit": "A" },
+          { "VGS": 6.5, "ID": 10, "unit": "A" }
+        ],
+        "typ": [5.6, 7],
+        "unit": "mΩ"
+      },
+      "gfs": {
+        "parameter": "Forward Transconductance",
+        "symbol": "gfs",
+        "conditions": [{ "VDS": 50, "ID": 12, "unit": "A" }],
+        "typ": 53,
+        "unit": "S"
+      },
+      "VSD": {
+        "parameter": "Diode Forward Voltage",
+        "symbol": "VSD",
+        "conditions": [{ "IS": 3.3, "VGS": 0, "unit": "A" }],
+        "typ": 0.73,
+        "unit": "V"
+      }
+    },
+    "dynamic": {
+      "Qg": {
+        "parameter": "Total Gate Charge",
+        "symbol": "Qg",
+        "conditions": [{ "VDS": 50, "VGS": 6.5, "ID": 12, "unit": "A" }],
+        "typ": 32,
+        "unit": "nC"
+      },
+      "Qgs": {
+        "parameter": "Gate-Source Charge",
+        "symbol": "Qgs",
+        "conditions": [{ "VDS": 50, "VGS": 6.5, "ID": 12, "unit": "A" }],
+        "typ": 9.2,
+        "unit": "nC"
+      },
+      "Qgd": {
+        "parameter": "Gate-Drain Charge",
+        "symbol": "Qgd",
+        "conditions": [{ "VDS": 50, "VGS": 6.5, "ID": 12, "unit": "A" }],
+        "typ": 15,
+        "unit": "nC"
+      },
+      "td(on)": {
+        "parameter": "Turn-On Delay Time",
+        "symbol": "td(on)",
+        "conditions": [
+          { "VDS": 50, "RL": 4.2, "ID": 12, "VGEN": 10, "RGEN": 6, "unit": "Ω" }
+        ],
+        "typ": 20,
+        "unit": "ns"
+      },
+      "tr": {
+        "parameter": "Rise Time",
+        "symbol": "tr",
+        "conditions": [
+          { "VDS": 50, "RL": 4.2, "ID": 12, "VGEN": 10, "RGEN": 6, "unit": "Ω" }
+        ],
+        "typ": 22,
+        "unit": "ns"
+      },
+      "td(off)": {
+        "parameter": "Turn-Off Delay Time",
+        "symbol": "td(off)",
+        "conditions": [
+          { "VDS": 50, "RL": 4.2, "ID": 12, "VGEN": 10, "RGEN": 6, "unit": "Ω" }
+        ],
+        "typ": 51,
+        "unit": "ns"
+      },
+      "tf": {
+        "parameter": "Fall Time",
+        "symbol": "tf",
+        "conditions": [
+          { "VDS": 50, "RL": 4.2, "ID": 12, "VGEN": 10, "RGEN": 6, "unit": "Ω" }
+        ],
+        "typ": 77,
+        "unit": "ns"
+      },
+      "Ciss": {
+        "parameter": "Input Capacitance",
+        "symbol": "Ciss",
+        "conditions": [{ "VDS": 50, "VGS": 0, "f": 1, "unit": "MHz" }],
+        "typ": 2681,
+        "unit": "pF"
+      },
+      "Coss": {
+        "parameter": "Output Capacitance",
+        "symbol": "Coss",
+        "conditions": [{ "VDS": 50, "VGS": 0, "f": 1, "unit": "MHz" }],
+        "typ": 592,
+        "unit": "pF"
+      },
+      "Crss": {
+        "parameter": "Reverse Transfer Capacitance",
+        "symbol": "Crss",
+        "conditions": [{ "VDS": 50, "VGS": 0, "f": 1, "unit": "MHz" }],
+        "typ": 20,
+        "unit": "pF"
+      }
+    }
+  },
+  "notes": {
+    "a": "Surface Mounted on 1\" x 1\" FR4 Board.",
+    "b": "Pulse width limited by maximum junction temperature",
+    "c": "Package limited"
+  },
+  "V_plateau": "4"
+}
