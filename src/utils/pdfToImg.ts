@@ -1,6 +1,7 @@
 import { fromPath } from 'pdf2pic';
 import fs from 'fs';
 import path from 'path';
+import { datasheetsFolderPath } from '..';
 
 export const convertPdfToImage = async (mfr: string, mpn: string) => {
   const savePath = path.join('intermediate', mfr, mpn, 'images');
@@ -20,7 +21,7 @@ export const convertPdfToImage = async (mfr: string, mpn: string) => {
     format: 'png',
   };
 
-  const filePath = `datasheets/${mfr}/${mpn}.pdf`;
+  const filePath = `${datasheetsFolderPath}/${mfr}/${mpn}.pdf`;
   const convert = fromPath(filePath, options);
 
   const result = await convert.bulk(-1, { responseType: 'image' });

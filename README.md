@@ -43,6 +43,14 @@ npm run dev
 
 ## Utility Scripts
 
+### Install MOSFETs datasheets
+
+To work with a collection of MOSFET datasheet PDFs install available package with:
+
+npm run install-datasheets
+
+Or change datasheetsFolderPath to a folder containing the PDFs in index.ts file.
+
 ### Move Omitted Files
 
 This script processes all directories in the 'intermediate' folder, moving any files found in 'omitted' subfolders back to their respective 'images' folders, and then deletes the empty 'omitted' folders.

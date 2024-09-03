@@ -1,11 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { convertPdfToImage } from './utils/pdfToImg';
-import { preselectImages, readVplateau } from './utils/openAI/openAI';
 import { readValuesFromImagesAnthropic } from './utils/anthropic/extractData';
-import { preselectPagesAnthropic } from './utils/anthropic/preselectPages';
 import { readVplateauAnthropic } from './utils/anthropic/readCharts';
 import { preselectPagesOpenAI } from './utils/openAI/preselectPages';
+
+// Set the datasheets folder path
+export const datasheetsFolderPath = './node_modules/fet-datasheets';
 
 const handlePdfConversion = async (mfr: string, mpn: string) => {
   try {
@@ -96,9 +97,9 @@ const processDocuments = async (
 
 // Call processDocuments on all directories
 const processAllManufacturers = () => {
-  const manufacturers = fs.readdirSync('./datasheets');
+  const manufacturers = fs.readdirSync(datasheetsFolderPath);
   manufacturers.forEach((mfr) => {
-    const mfrPath = path.join('./datasheets', mfr);
+    const mfrPath = path.join(datasheetsFolderPath, mfr);
     if (fs.lstatSync(mfrPath).isDirectory()) {
       processDocuments(mfrPath);
     }
@@ -106,12 +107,12 @@ const processAllManufacturers = () => {
 };
 
 // Call processDocuments on individual directories for testing
-// processDocuments('./datasheets/analog_power_inc.');
-// processDocuments('./datasheets/anhi');
-// processDocuments('./datasheets/apm');
-// processDocuments('./datasheets/epc_space');
-//processDocuments('./datasheets/slkor');
-// processDocuments('./datasheets/ts');
+// processDocuments(`${datasheetsFolderPath}/analog`);
+// processDocuments(`${datasheetsFolderPath}/anhi`);
+// processDocuments(`${datasheetsFolderPath}/apm`);
+// processDocuments(`${datasheetsFolderPath}/epc_space`);
+//processDocuments(`${datasheetsFolderPath}/slkor`);
+// processDocuments(`${datasheetsFolderPath}/ts`);
 
 // readVplateau('./intermediate/epc_space/EPC7018GC', 'EPC7018GC.5.png').then(
 //   (res) => console.log(res)

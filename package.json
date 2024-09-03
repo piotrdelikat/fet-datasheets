@@ -23,6 +23,7 @@
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "watch": "tsc --watch",
+    "install-datasheets": "npm install https://github.com/open-pe/fet-datasheets",
     "fix-filenames": "ts-node src/utils/fixFileNames.ts",
     "move-omitted": "ts-node src/utils/moveOmittedFiles.ts"
   }

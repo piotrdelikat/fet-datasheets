@@ -4,6 +4,7 @@ import path from 'path';
 
 import dotenv from 'dotenv';
 import { importMarkdownFile } from '../helpers';
+import { datasheetsFolderPath } from '../..';
 dotenv.config();
 
 const openai = new OpenAI({
@@ -251,15 +252,14 @@ export async function preselectImages(
 }
 
 const countLLMCost_gpt4o = () => {
-  const datasheetsPath = './datasheets';
   const costPerFile = 0.1;
   let totalCost = 0;
   let totalFiles = 0;
 
-  const manufacturers = fs.readdirSync(datasheetsPath);
+  const manufacturers = fs.readdirSync(datasheetsFolderPath);
 
   manufacturers.forEach((mfr) => {
-    const mfrPath = path.join(datasheetsPath, mfr);
+    const mfrPath = path.join(datasheetsFolderPath, mfr);
     if (fs.lstatSync(mfrPath).isDirectory()) {
       const files = fs.readdirSync(mfrPath);
       totalFiles += files.length;
